@@ -1,8 +1,14 @@
-.App {
-  text-align: center;
-  /* position: fixed;
+
+.bar-wrapper {
+  width: 100vw;
+  position: fixed;
   bottom: 0;
-  width: 100%; */
+  background: #fff;
+  z-index: 100;
+}
+
+.height60{
+  height: 0.57rem;
 }
 
 .App-logo {

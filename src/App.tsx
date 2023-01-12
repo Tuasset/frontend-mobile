@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { Badge, TabBar } from "antd-mobile";
 import {
   AppOutline,
-  MessageOutline,
-  MessageFill,
+  // MessageOutline,
+  // MessageFill,
+  AntOutline,
   UnorderedListOutline,
   UserOutline,
 } from "antd-mobile-icons";
 import { Routes, Route, useNavigate } from "react-router-dom";
 // import logo from "./logo.svg";
 import Main from "./pages/Main";
+import Intro from "./pages/Intro";
 import Learn from "./pages/Learn";
 import Listing from "./pages/Listing";
 import Experience from "./pages/Experience";
@@ -20,26 +22,27 @@ function App() {
   const tabs = [
     {
       key: "",
-      title: "首页",
+      title: "Intro",
       icon: <AppOutline />,
       badge: Badge.dot,
     },
     {
       key: "learn",
-      title: "待办",
+      title: "Learn",
       icon: <UnorderedListOutline />,
       badge: "5",
     },
     {
       key: "listing",
-      title: "消息",
-      icon: (active: boolean) =>
-        active ? <MessageFill /> : <MessageOutline />,
+      title: "Listing",
+      // icon: (active: boolean) =>
+      //   active ? <MessageFill /> : <MessageOutline />,
+      icon: <AntOutline />,
       badge: "99+",
     },
     {
       key: "experience",
-      title: "我的",
+      title: "Experience",
       icon: <UserOutline />,
     },
   ];
@@ -54,20 +57,20 @@ function App() {
 
   return (
     <>
-      <div className="App">
+      <div className="bar-wrapper">
         <TabBar activeKey={activeKey} onChange={changeItem}>
           {tabs.map((item) => (
             <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
         </TabBar>
       </div>
-      {/* <RouterProvider router={router} /> */}
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
         <Route path="listing" element={<Listing />} />
         <Route path="experience" element={<Experience />} />
       </Routes>
+      <div className="height60"></div>
     </>
   );
 }
