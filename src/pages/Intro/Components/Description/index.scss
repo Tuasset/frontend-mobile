@@ -43,6 +43,7 @@
       background: #ffffff;
       mix-blend-mode: normal;
       opacity: 0.9;
+      padding-top: 15px;
 
       .paragraph-01 {
         font-family: "Inter";
@@ -51,7 +52,7 @@
         font-size: 0.21rem;
         line-height: 130.02%;
         /* or 29px */
-        margin: 16px 15px;
+        margin: 0px 15px;
 
         color: #000000;
       }
@@ -62,7 +63,8 @@
         font-size: 0.21rem;
         line-height: 130.02%;
         /* or 29px */
-        margin: 16px 15px;
+        margin: 16px 15px 30px;
+        padding-bottom: 15px;
 
         color: #000000;
       }
