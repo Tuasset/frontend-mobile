@@ -21,7 +21,7 @@ import "./App.css";
 function App() {
   const tabs = [
     {
-      key: "",
+      key: "mobile",
       title: "Intro",
       icon: <AppOutline />,
       badge: Badge.dot,
@@ -65,7 +65,7 @@ function App() {
         </TabBar>
       </div>
       <Routes>
-        <Route path="/" element={<Intro />} />
+        <Route path="mobile" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
         <Route path="listing" element={<Listing />} />
         <Route path="experience" element={<Experience />} />
