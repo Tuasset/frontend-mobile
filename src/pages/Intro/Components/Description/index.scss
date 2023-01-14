@@ -1,5 +1,6 @@
-.description {
+.intro-description {
   background: #fff;
+  padding-top: 0.2rem;
 
   .title {
     font-family: "Inter";
@@ -32,10 +33,13 @@
   }
   .paragraph-wrapper {
     margin-top: 16px;
-    padding: 0 30px;
+    padding: 0 14px;
     height: 7.276rem;
-    background-image: url("https://tuassets.com/wp-content/reactpress/imgs/bg.921c52e9de08b00bbcaf.jpeg?_t=1673568861");
+    background-image: url("https://tuassets.com/wp-content/reactpress/imgs/intro/bg.jpeg?_t=1673571064");
     background-color: #cccccc;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
 
     .paragraph-inner {
       /* Frame 488 */
@@ -64,9 +68,13 @@
         line-height: 130.02%;
         /* or 29px */
         margin: 16px 15px 30px;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
 
         color: #000000;
+
+        .bold-text{
+          font-weight: bold;
+        }
       }
     }
   }

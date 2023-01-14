@@ -1,0 +1,30 @@
+.intro-financing {
+  padding: 0.61rem 0.286rem;
+  background: #fff;
+
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.3rem;
+    line-height: 0.37rem;
+    color: #000000;
+    text-align: center;
+  }
+
+  .img-wrapper {
+    margin-top: 0.228rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    .img {
+      display: block;
+      width: 1.66rem;
+      height: 5.33rem;
+      background: #f7f7f8;
+      mix-blend-mode: normal;
+      border-radius: 16px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.intro-card {
+  padding: 0.286rem 0.286rem 0.333rem;
+  background: #f7f7f8;
+  mix-blend-mode: normal;
+
+  .cards-line {
+    background: #ffffff;
+    mix-blend-mode: normal;
+    border-radius: 16px;
+    margin-bottom: 0.22rem;
+    padding: 0.19rem 0.19rem 0.114rem;
+
+    .img-wrapper {
+      display: flex;
+      justify-content: space-around;
+      .img {
+        width: 1.447rem;
+        height: 1.762rem;
+        border-radius: 8px;
+      }
+    }
+    .title {
+        margin-top: 0.114rem;
+        text-align: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.228rem;
+        line-height: 0.276rem;
+        color: #000000;
+      }
+  }
+}

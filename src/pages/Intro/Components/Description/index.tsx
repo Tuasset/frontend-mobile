@@ -1,13 +1,10 @@
 import React from "react";
 import "./index.scss";
-import { Button } from "antd-mobile";
-import { useNavigate } from "react-router-dom";
 
 function App() {
-  let navigate = useNavigate();
 
   return (
-    <div className="description">
+    <div className="intro-description">
       <p className="title">Own your next vacation home, simplified.</p>
       <p className="subtitle">Simplified? Easy? Too good to be true? Nah.</p>
       <div className="paragraph-wrapper">
@@ -22,10 +19,17 @@ function App() {
             guide them through the real estate journey.
           </p>
           <p className="paragraph-02">
-            With home-ownership does come responsibilities. However, since Travi
-            will help our members manage the home, we will take charge of all
-            the cleaning, maintenance, utilities, and property tax payment. All
-            our members are in charge of is the membership fee. That’s it!
+            <span>
+              With home-ownership does come responsibilities. However, since
+              Travi will help our members manage the home,
+            </span>
+            <span className="bold-text">
+              we will take charge of all the cleaning, maintenance, utilities,
+              and property tax payment.
+            </span>
+            <span>
+              All our members are in charge of is the membership fee. That’s it!
+            </span>
           </p>
         </div>
       </div>
