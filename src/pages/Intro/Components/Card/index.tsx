@@ -17,10 +17,10 @@ const dataList = [
 function App() {
   return (
     <div className="intro-card">
-      {dataList.map((item) => {
+      {dataList.map((item, idx) => {
         const { img1, img2, title } = item;
         return (
-          <div className="cards-line">
+          <div className="cards-line" key={String(idx)}>
             <div className="img-wrapper">
               <img className="img" src={img1} alt="img" />
               <img className="img" src={img2} alt="img" />

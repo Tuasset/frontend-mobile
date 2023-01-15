@@ -6,6 +6,7 @@ import Card from "./Components/Card";
 import Financing from "./Components/Financing";
 import Faqs from "./Components/Faqs";
 import Emails from "./Components/Emails";
+import Bottom from "./Components/Bottom";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Financing />
       <Faqs />
       <Emails />
+      <Bottom />
     </div>
   );
 }

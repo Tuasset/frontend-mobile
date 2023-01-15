@@ -1,12 +1,12 @@
 .intro-emails {
   position: relative;
-  margin-top: 1.14rem;
+  margin: 0.5rem 0 0.1rem;
   background: #fff;
-  background-image: url("https://tuassets.com/wp-content/reactpress/imgs/intro/email.jpeg?_t=1673594356");
+  background-image: url("https://tuassets.com/wp-content/reactpress/imgs/intro/email.png?_t=1673772154");
   background-color: #fff;
-  background-size: contain;
+  background-size: 100vw, 5.87rem;
   background-repeat: no-repeat;
-  height: 5rem;
+  height: 5.87rem;
 
   .email-form {
     width: 2.857rem;
@@ -85,5 +85,16 @@
         color: #ffffff;
       }
     }
+  }
+  .agree-wrapper {
+    /* Create an account with this email to receive exclusive updates & listings. */
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    opacity: 0.8;
   }
 }

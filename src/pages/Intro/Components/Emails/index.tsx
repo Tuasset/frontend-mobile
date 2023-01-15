@@ -1,19 +1,10 @@
-import React from "react";
-import {
-  Form,
-  Input,
-  Button,
-  Dialog,
-  TextArea,
-  DatePicker,
-  Selector,
-  Slider,
-  Stepper,
-  Switch,
-} from "antd-mobile";
+import React, { useState } from "react";
+import { Checkbox } from "antd-mobile";
 import "./index.scss";
 
 function App() {
+  const [check, setCheck] = useState<boolean>(true);
+
   return (
     <div className="intro-emails">
       <div className="email-form">
@@ -39,7 +30,10 @@ function App() {
           <div className="btn">Submit</div>
         </div>
         <div className="agree-wrapper">
-            
+          <Checkbox checked={check}>
+            Create an account with this email to receive exclusive updates &
+            listings.
+          </Checkbox>
         </div>
       </div>
     </div>
