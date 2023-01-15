@@ -30,7 +30,7 @@ function App() {
           <div className="btn">Submit</div>
         </div>
         <div className="agree-wrapper">
-          <Checkbox checked={check}>
+          <Checkbox defaultChecked>
             Create an account with this email to receive exclusive updates &
             listings.
           </Checkbox>
