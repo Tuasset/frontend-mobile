@@ -1,0 +1,91 @@
+.landing-InvestmentType {
+  margin-top: 0.2rem;
+  margin-left: 0.15rem;
+  text-align: left;
+  .landing-InvestmentType-title{
+    text-align: left;
+    p{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: -0.06em;
+
+      color: #000000;
+    }
+  }
+  .landing-JourneyStart{
+    margin-top: 0.3rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    .landing-JourneyStart-left{
+      display: inline-block;
+      p{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        letter-spacing: -0.03em;
+
+        color: #000000;
+
+        margin-bottom: 8px;
+      }
+      div{
+
+        height: 8px;
+        background: linear-gradient(89.93deg, #005889 -4.79%, rgba(255, 153, 221, 0.73) 51.66%, rgba(255, 200, 58, 0.49) 80.84%, rgba(220, 223, 226, 0.52) 94.26%);
+        border-radius: 4px;
+      }
+    }
+    .landing-JourneyStart-right {
+      display: inline-block;
+      margin-left: 0.25rem;
+    }
+
+  }
+
+  .landing-JourneyStart-buttons{
+    display: flex;
+
+  }
+
+  .landing-JourneyStart-details{
+    margin-top: 0.3rem;
+    p{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 140%;
+      /* or 31px */
+
+      letter-spacing: -0.03em;
+
+      color: rgba(0, 0, 0, 0.9);
+      strong{
+        background: linear-gradient(272.16deg, #FED133 12.1%, #FF99DD 23.96%, #005889 37.75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+      }
+    }
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    /* or 31px */
+
+    letter-spacing: -0.03em;
+
+    color: #000000;
+  }
+
+}
