@@ -1,0 +1,50 @@
+.landing-started {
+  .started-describe{
+    text-align: center;
+    padding-top:5%;
+
+    p{
+      /*font style*/
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -0.06em;
+
+      color: #0E547B;
+    }
+
+  }
+
+  .started-button{
+    margin: 5% 0 5% 0;
+
+    background: #FED133;
+    border-radius: 32px;
+    border-width: 0;
+    padding: 5px;
+
+    p{
+      padding: 0 0.05em 0 0.05em;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      /* identical to box height */
+
+      letter-spacing: -0.08em;
+
+      color: #000000;
+    }
+
+
+  }
+
+  .started-img{
+    object-fit: scale-down;
+    width: 100%;
+  }
+
+}
