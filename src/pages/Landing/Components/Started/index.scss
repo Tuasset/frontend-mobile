@@ -1,4 +1,7 @@
 .landing-started {
+  p{
+    margin-bottom: 0;
+  }
   .started-describe{
     text-align: center;
     padding-top:5%;
@@ -24,6 +27,8 @@
     border-radius: 32px;
     border-width: 0;
     padding: 5px;
+
+    width: 50%;
 
     p{
       padding: 0 0.05em 0 0.05em;
