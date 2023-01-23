@@ -1,6 +1,9 @@
 .landing-InvestmentType {
+  p{
+    margin-bottom: 0;
+  }
   margin-top: 0.2rem;
-  margin-left: 0.15rem;
+  margin-left: 0.3rem;
   text-align: left;
   .landing-InvestmentType-title{
     text-align: left;
@@ -51,12 +54,73 @@
   }
 
   .landing-JourneyStart-buttons{
+    margin: 1.3em 0 ;
+
+    text-align: center;
     display: flex;
+    justify-content: left;
+
+    gap: 1%;
+
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      width: 80px;
+      height: 80px;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+
+      border-radius:50%;
+
+      color: rgba(0, 0, 0, 0.8);
+
+    }
+    .landing-JourneyStart-buttons-buy{
+      border: 2px solid #005889;
+
+      &:hover{
+        background-color: #005889;
+        color: #FFFFFF;
+      }
+    }
+    .landing-JourneyStart-buttons-vacation{
+       border: 2px solid #FF99DD;
+      &:hover{
+        background-color: #FF99DD;
+        color: #FFFFFF;
+      }
+    }
+    .landing-JourneyStart-buttons-rent{
+        border: 2px solid #FED133;
+      &:hover{
+        background-color: #FED133;
+        color: #FFFFFF;
+      }
+    }
+    .landing-JourneyStart-buttons-Invest{
+      border: 2px solid #DCDFE2;
+      &:hover{
+        background-color: #DCDFE2;
+        color: #FFFFFF;
+      }
+    }
 
   }
 
   .landing-JourneyStart-details{
-    margin-top: 0.3rem;
+    .landing-JourneyStart-details-origin{
+      display: none;
+    }
     p{
       font-family: 'Inter';
       font-style: normal;
@@ -86,6 +150,22 @@
     letter-spacing: -0.03em;
 
     color: #000000;
+
+    span{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+      /* or 28px */
+
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+
+      color: #000000;
+
+      mix-blend-mode: normal;
+    }
   }
 
 }

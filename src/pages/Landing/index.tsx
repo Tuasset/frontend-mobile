@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Bottom from "./Components/Bottom";
 import Started from "./Components/Started";
 import InvestmentType from "./Components/InvestmentType";
+import HotDestination from "./Components/HotDestination";
+import TopProperties from "./Components/TopProperties";
 
 
 
@@ -15,6 +17,8 @@ function App() {
     <div className="landing">
         <Started/>
         <InvestmentType/>
+        <HotDestination/>
+        <TopProperties/>
 
         <Bottom/>
     </div>

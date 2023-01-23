@@ -1,0 +1,186 @@
+.landing-TopProperties {
+  margin-top: 0.5rem;
+  padding: 0.1rem 0 0.5rem 0.3rem;
+  p{
+    margin-bottom: 0;
+  }
+
+  .landing-TopProperties-title{
+    text-align: left;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+    letter-spacing: -0.04em;
+
+    color: #000000;
+
+    p{
+      color: #FF99DD;
+    }
+  }
+
+  .landing-TopProperties-Cities{
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+
+    button{
+      display: flex;
+      align-items: center;
+
+      background-color: transparent;
+      border-width: 0;
+
+      padding: 0.1rem;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: -0.03em;
+
+      /* 80% Black */
+
+      color: rgba(0, 0, 0, 0.8);
+
+      svg{
+        visibility: hidden;
+      }
+
+    }
+
+
+    button:hover:active{
+      display: flex;
+      align-items: center;
+
+      background: linear-gradient(179.49deg, rgba(241, 242, 243, 0.6) 0.44%, rgba(255, 153, 221, 0.6) 250.18%);
+      border-radius: 16px;
+      border-width: 0;
+
+      padding: 0.1rem;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: -0.03em;
+
+      /* 80% Black */
+
+      color: rgba(0, 0, 0, 0.8);
+
+      svg{
+        visibility: visible;
+      }
+
+    }
+
+  }
+
+  .landing-TopProperties-Houses{
+    white-space: nowrap;
+    overflow-x: scroll;
+
+    margin-top: 0.2rem;
+
+    .landing-TopProperties-Houses-house{
+
+      margin-right: 0.2rem;
+
+      white-space: nowrap;
+      display: inline-block;
+
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      width: 300px;
+
+      img{
+        aspect-ratio: 1/1;
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .houseInfoRow1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.05rem 0.1rem;
+
+        margin-top: 0.05rem;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        /* identical to box height, or 24px */
+
+
+        color: #000000;
+
+        img{
+          aspect-ratio: 1/1;
+          width: 24px;
+        }
+        span{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 100%;
+          /* identical to box height, or 18px */
+
+
+          color: #000000;
+        }
+      }
+
+      .houseInfoRow2{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.05rem 0.1rem;
+
+        margin-bottom: 0.1rem;
+
+        p{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
+          /* identical to box height, or 16px */
+
+          letter-spacing: -0.01em;
+
+          color: #000000;
+        }
+
+        strong{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 100%;
+          /* identical to box height, or 16px */
+
+          color: #000000;
+        }
+
+      }
+    }
+  }
+
+
+}
