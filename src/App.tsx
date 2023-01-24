@@ -33,7 +33,7 @@ function App() {
       icon: <UnorderedListOutline />,
       badge: "5",
     },{
-      key: "landing",
+      key: "mobile\\landing",
       title: "Home",
       icon: <AppOutline />,
       badge: Badge.dot,
@@ -73,7 +73,7 @@ function App() {
       <Routes>
         <Route path="mobile" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
-        <Route path="landing" element={<Landing />} />
+        <Route path="mobile/landing" element={<Landing />} />
         <Route path="listing" element={<Listing />} />
         <Route path="experience" element={<Experience />} />
       </Routes>

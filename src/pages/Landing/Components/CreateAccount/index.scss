@@ -1,0 +1,80 @@
+.landing-CreateAccount {
+  text-align: left;
+
+  margin: 0.3rem 0;
+
+  p{
+    margin-bottom: 0;
+  }
+   .landing-CreateAccount-title{
+     text-align: center;
+     background: #FFC2EB;
+     padding: 0.3rem;
+
+     font-family: 'Inter';
+     font-style: normal;
+     font-weight: 600;
+     font-size: 25px;
+     line-height: 39px;
+     text-align: center;
+     letter-spacing: -0.04em;
+
+     color: #FFFFFF;
+   }
+
+  .landing-CreateAccount-Main{
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-image: url("https://tuassets.com/wp-content/reactpress/imgs/landing/CreatAccountBackground.png?_t=1674556514");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    padding-top: 0.4rem;
+
+    text-align: center;
+
+    button{
+      background: #FED133;
+      box-shadow: 4px 6px 20px 4px rgba(0, 88, 137, 0.1);
+      border-radius: 24px;
+      border-width: 0;
+      padding: 0.1rem 0.2rem;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      /* identical to box height */
+
+      letter-spacing: -0.03em;
+
+      color: #000000;
+    }
+
+    p{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 0.2rem;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      /* identical to box height */
+
+      letter-spacing: -0.03em;
+
+      color: #FED133;
+
+      svg{
+        margin-left: 0.1rem;
+      }
+
+    }
+  }
+
+}
