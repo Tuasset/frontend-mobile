@@ -90,7 +90,7 @@ function App() {
         <div className="landing-TopProperties-Cities">
             {dataList.map((item, key)=>{
                 return(
-                    <button id={"landing-TopProperties-Cities-button"+key} className="landing-TopProperties-Cities-button" onClick={()=>setCurHouse(item)}>
+                    <button id={"landing-TopProperties-Cities-button"+key} className="landing-TopProperties-Cities-button " onClick={()=>setCurHouse(item)}>
                         {item.cityName}
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.6">

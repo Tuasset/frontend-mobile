@@ -7,6 +7,9 @@ import Started from "./Components/Started";
 import InvestmentType from "./Components/InvestmentType";
 import HotDestination from "./Components/HotDestination";
 import TopProperties from "./Components/TopProperties";
+import ToList from "./Components/ToList";
+import CreateAccount from "./Components/CreateAccount";
+import SubscribeEmail from "./Components/SubscribeEmail";
 
 
 
@@ -19,6 +22,9 @@ function App() {
         <InvestmentType/>
         <HotDestination/>
         <TopProperties/>
+        <ToList/>
+        <CreateAccount/>
+        <SubscribeEmail/>
 
         <Bottom/>
     </div>
