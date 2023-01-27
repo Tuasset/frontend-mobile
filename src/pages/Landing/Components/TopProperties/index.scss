@@ -30,30 +30,12 @@
     display: flex;
     justify-content: space-between;
 
-    &:first-child{
-
-      display: flex;
-      align-items: center;
-
-      background: linear-gradient(179.49deg, rgba(241, 242, 243, 0.6) 0.44%, rgba(255, 153, 221, 0.6) 250.18%);
-      border-radius: 16px;
-      border-width: 0;
-
-      padding: 0.1rem;
-
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 24px;
-      letter-spacing: -0.03em;
-
-      /* 80% Black */
-
-      color: rgba(0, 0, 0, 0.8);
+    .MiamiButtonHover{
+      background: linear-gradient(179.49deg, rgba(241, 242, 243, 0.6) 0.44%, rgba(255, 153, 221, 0.6) 250.18%) !important;
+      border-radius: 16px!important;
 
       svg{
-        visibility: visible;
+        visibility: visible!important;
       }
     }
 

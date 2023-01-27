@@ -62,14 +62,19 @@
 
     gap: 1%;
 
+    @media (max-width: 370px){
+      a{
+        font-size: 10px!important;
+      }
+    }
+
     a{
       display: flex;
       align-items: center;
       justify-content: center;
 
-
+      aspect-ratio: 1/1;
       width: 80px;
-      height: 80px;
 
       font-family: 'Inter';
       font-style: normal;
@@ -85,6 +90,11 @@
       color: rgba(0, 0, 0, 0.8);
 
     }
+    .buyButtonHover{
+      background-color: #005889!important;
+      color: #FFFFFF!important;
+    }
+
     .landing-JourneyStart-buttons-buy{
       border: 2px solid #005889;
 
