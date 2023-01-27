@@ -5,6 +5,7 @@ import "./index.scss";
 
 function App() {
 
+
     const dataList = [{
         cityName: "Miami",
         houses: [{
@@ -13,21 +14,24 @@ function App() {
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         },{
             image:"https://tuassets.com/wp-content/reactpress/imgs/landing/house2.png?_t=1674482428",
             price:"8,000",
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         },{
             image:"https://tuassets.com/wp-content/reactpress/imgs/landing/house2.png?_t=1674482428",
             price:"8,000",
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         }]
     },{
         cityName: "Boston",
@@ -37,21 +41,24 @@ function App() {
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         },{
             image:"https://tuassets.com/wp-content/reactpress/imgs/landing/house2.png?_t=1674482428",
             price:"9,000",
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         },{
             image:"https://tuassets.com/wp-content/reactpress/imgs/landing/house2.png?_t=1674482428",
             price:"9,000",
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         }]
     },{
         cityName: "Seattle",
@@ -61,25 +68,41 @@ function App() {
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         },{
             image:"https://tuassets.com/wp-content/reactpress/imgs/landing/house2.png?_t=1674482428",
             price:"7,000",
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         },{
             image:"https://tuassets.com/wp-content/reactpress/imgs/landing/house2.png?_t=1674482428",
             price:"7,000",
             city:"Malibu",
             state:"CA",
             bedroom:3,
-            bathroom:3
+            bathroom:3,
+            like:false
         }]
     }]
 
-    const [curHouse, setCurHouse] = useState(dataList[0]);
+    const [curHouse, setCurHouse] = useState(0);
+
+    const [houseData, setHouseData] = useState(dataList);
+
+    const [firstHover, setFirstHover] = useState("MiamiButtonHover");
+
+    const likeChange = (likeOrdis:any,key:number)=>{
+
+        const arrCopy = houseData.slice();
+        arrCopy[curHouse].houses[key].like = !likeOrdis
+
+        setHouseData(arrCopy);
+
+    }
 
   return (
     <div className="landing-TopProperties">
@@ -90,7 +113,10 @@ function App() {
         <div className="landing-TopProperties-Cities">
             {dataList.map((item, key)=>{
                 return(
-                    <button id={"landing-TopProperties-Cities-button"+key} className="landing-TopProperties-Cities-button " onClick={()=>setCurHouse(item)}>
+                    <button id={"landing-TopProperties-Cities-button"+key} className={"landing-TopProperties-Cities-button " + (key==0?firstHover:"")} onClick={()=> {
+                        setCurHouse(key);
+                        setFirstHover("");
+                    }}>
                         {item.cityName}
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.6">
@@ -103,7 +129,7 @@ function App() {
         </div>
         <div className="landing-TopProperties-Houses">
             {
-                curHouse.houses.map((item, key)=>{
+                houseData[curHouse].houses.map((item, key)=>{
                     return (
                         <div className="landing-TopProperties-Houses-house">
                             <img src={item.image}/>
@@ -112,7 +138,7 @@ function App() {
                                     {"$"+item.price}
                                     <span>/share</span>
                                 </div>
-                                <img src="https://tuassets.com/wp-content/reactpress/imgs/landing/like.svg"/>
+                                <img onClick={()=>likeChange(item.like, key)} src={item.like?"https://tuassets.com/wp-content/reactpress/imgs/landing/heart.png?_t=1674825136":"https://tuassets.com/wp-content/reactpress/imgs/landing/love.png?_t=1674825136"}/>
 
                             </div>
                             <div className="houseInfoRow2">

@@ -33,6 +33,8 @@ function App() {
 
     const [showJourneyButton, setShowJourneyButton] = React.useState(detailsList[0]);
 
+    const [buyButtonHover, setBuyButtonHover]= useState("buyButtonHover");
+
 
   return (
     <div className="landing-InvestmentType">
@@ -59,7 +61,7 @@ function App() {
             {
                 detailsList.map((item, key)=>{
                     return(
-                        <a className={item.btnClassName} onClick={()=>{setShowJourneyButton(item)}}>
+                        <a className={item.btnClassName + " " + (key==0?buyButtonHover:"")} onClick={()=>{setShowJourneyButton(item); setBuyButtonHover("")}}>
                             {item.title}
                         </a>
                     )
