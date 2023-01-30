@@ -1,0 +1,67 @@
+.landing-HotDestination {
+  background-color: #005889;
+  margin-top: 0.5rem;
+  padding: 0.1rem 0 0.5rem 0.3rem;
+  p{
+    margin-bottom: 0;
+  }
+  .landing-HotDestination-title{
+
+    margin-top: 0.3rem;
+    padding-bottom: 0.3rem;
+
+
+
+    text-align: left;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -0.06em;
+
+    color: #DCDFE2;
+
+    mix-blend-mode: normal;
+    p{
+      color: #FED133;
+    }
+  }
+
+  .landing-HotDestination-city{
+    gap: 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .landing-HotDestination-city-each{
+      flex-basis:40%;
+      display: inline-block;
+      img{
+        top:0;
+        aspect-ratio:1/1;
+        width: 100%;
+
+        border-radius: 50%;
+
+        margin-bottom: 0.1rem;
+      }
+      p{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+
+        /* light yellow as background */
+
+        color: #FFFBEF;
+      }
+    }
+  }
+
+}

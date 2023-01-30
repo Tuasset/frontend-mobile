@@ -13,6 +13,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Main from "./pages/Main";
 import Intro from "./pages/Intro";
 import Learn from "./pages/Learn";
+import Landing from "./pages/Landing";
 import Listing from "./pages/Listing";
 import Experience from "./pages/Experience";
 
@@ -31,6 +32,11 @@ function App() {
       title: "Learn",
       icon: <UnorderedListOutline />,
       badge: "5",
+    },{
+      key: "mobile\\landing",
+      title: "Home",
+      icon: <AppOutline />,
+      badge: Badge.dot,
     },
     {
       key: "listing",
@@ -67,6 +73,7 @@ function App() {
       <Routes>
         <Route path="mobile" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
+        <Route path="mobile/landing" element={<Landing />} />
         <Route path="listing" element={<Listing />} />
         <Route path="experience" element={<Experience />} />
       </Routes>
