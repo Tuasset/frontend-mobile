@@ -1,0 +1,40 @@
+.intro-explore {
+  width: 100%;
+  height: 5rem;
+  background: #fff;
+  margin-top: 0.61rem;
+
+  .content {
+    width: 100%;
+    height: 4.38rem;
+    box-sizing: border-box;
+    padding: 0.323rem 0.286rem;
+    background-image: url("https://tuassets.com/wp-content/reactpress/imgs/intro/content-bg.jpeg?_t=1674030913");
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .img {
+      width: 3.43rem;
+      height: 1.71rem;
+      background: #d9d9d9;
+      border-radius: 16px;
+    }
+    .desc {
+      margin-top: 0.228rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.21rem;
+      line-height: 0.257rem;
+      color: #005889;
+    }
+    .btn {
+      margin-top: 0.286rem;
+      display: block;
+      width: 2rem;
+      height: 0.5rem;
+    }
+  }
+}

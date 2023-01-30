@@ -1,0 +1,36 @@
+body {
+  background: #f8f8f8;
+}
+.h38 {
+  height: 0.38rem;
+}
+.listing {
+  padding-top: 10px;
+  .menu-wrapper {
+    position: fixed;
+    top: 0;
+    .adm-dropdown {
+      overflow-x: scroll;
+  
+      .adm-dropdown-nav {
+        width: 6rem;
+  
+        .adm-dropdown-item {
+          flex: auto;
+        }
+      }
+    }
+  }
+  
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.19rem;
+    line-height: 120%;
+    /* or 24px */
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
