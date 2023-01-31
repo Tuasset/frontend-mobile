@@ -16,6 +16,7 @@ import Learn from "./pages/Learn";
 import Landing from "./pages/Landing";
 import Listing from "./pages/Listing";
 import Experience from "./pages/Experience";
+import Actual from "./pages/Actual";
 
 import "./App.css";
 
@@ -26,8 +27,7 @@ function App() {
       title: "Intro",
       icon: <AppOutline />,
       badge: Badge.dot,
-    },
-    {
+    }, {
       key: "learn",
       title: "Learn",
       icon: <UnorderedListOutline />,
@@ -37,16 +37,14 @@ function App() {
       title: "Home",
       icon: <AppOutline />,
       badge: Badge.dot,
-    },
-    {
+    }, {
       key: "listing",
       title: "Listing",
       // icon: (active: boolean) =>
       //   active ? <MessageFill /> : <MessageOutline />,
       icon: <AntOutline />,
       badge: "99+",
-    },
-    {
+    }, {
       key: "experience",
       title: "Experience",
       icon: <UserOutline />,
@@ -74,6 +72,7 @@ function App() {
         <Route path="mobile" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
         <Route path="mobile/landing" element={<Landing />} />
+        <Route path="mobile/actual" element={<Actual />} />
         <Route path="listing" element={<Listing />} />
         <Route path="experience" element={<Experience />} />
       </Routes>

@@ -17,7 +17,8 @@ function App() {
         name: "Miami"
     },{
         img: "https://tuassets.com/wp-content/reactpress/imgs/landing/nullCity.svg",
-        name: ""
+        name: "Tell  us \n" +
+            "your wish"
     }]
 
   return (
