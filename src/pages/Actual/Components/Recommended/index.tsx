@@ -32,7 +32,7 @@ function App() {
     const likeChange = (ifLike:any,key:number)=>{
 
         const arrCopy = recomendedHouse.slice();
-        recomendedHouse[key].like = !ifLike
+        arrCopy[key].like = !ifLike
 
         setRecommondedHouse(arrCopy);
 

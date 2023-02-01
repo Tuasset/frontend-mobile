@@ -12,8 +12,16 @@ function App() {
     size:1800,
     yearBuilt:2000,
     price:"15,000",
-    membershipFee:"500"
+    membershipFee:"500",
+    ifLike:false
   })
+
+  const likeChange = ()=>{
+    setInformation({
+      ...infomation,
+      ifLike:!infomation.ifLike
+    })
+  }
 
 
   return (
@@ -28,9 +36,7 @@ function App() {
 
           </div>
           <div className="collect">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.84225 9.04269L9.99961 16.2L17.157 9.04269C17.9526 8.24704 18.3996 7.16791 18.3996 6.04269C18.3996 3.69954 16.5001 1.80005 14.157 1.80005C13.0317 1.80005 11.9526 2.24704 11.157 3.04269L9.99961 4.20005L8.84225 3.04269C8.0466 2.24704 6.96747 1.80005 5.84225 1.80005C3.4991 1.80005 1.59961 3.69954 1.59961 6.04269C1.59961 7.16791 2.0466 8.24704 2.84225 9.04269Z" stroke="#FF99DD" stroke-width="1.6" stroke-linejoin="round"/>
-            </svg>
+            <img onClick={()=>{likeChange()}} src={infomation.ifLike?"https://tuassets.com/wp-content/reactpress/imgs/landing/heart.png?_t=1674825136":"https://tuassets.com/wp-content/reactpress/imgs/actual/empty-heart.svg?_t=1674825136"}/>
             <span>Collect</span>
           </div>
 
