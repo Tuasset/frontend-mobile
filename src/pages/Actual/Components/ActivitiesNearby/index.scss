@@ -1,2 +1,78 @@
-.AttractionsNearby {
+.ActivitiesNearby {
+  display: flex;
+  justify-content: left;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  padding:0 0.25rem;
+
+  margin-top: 0.3rem;
+
+  .title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: rgba(0, 0, 0, 0.8);
+
+    margin-bottom: 0.15rem;
+  }
+
+  .activites{
+    white-space: nowrap;
+    overflow-x: scroll;
+
+    .activity{
+      border-radius: 8px;
+      background: #F5F5F7;
+      width: 180px;
+
+      white-space: nowrap;
+      display: inline-block;
+
+      padding: 0.25rem;
+      margin-right: 0.2rem;
+
+      text-align: left;
+
+      p{
+
+        word-break: normal;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      .activity-name{
+        margin-top: 0.4rem;
+        margin-bottom: 0.2rem;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+        text-transform: capitalize;
+
+        color: #000000;
+      }
+
+      .activity-description{
+        padding-right: 0.4rem;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+
+        margin-bottom: 0.8rem;
+      }
+    }
+
+
+  }
 }

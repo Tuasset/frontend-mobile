@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="Map">
-        <p>
+        <p className="title">
             Map
         </p>
       <div className="map-contain">

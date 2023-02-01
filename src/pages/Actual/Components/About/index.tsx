@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="About">
-      <p>
+        <p className="title">
         About
       </p>
       <div className="About-contain">
