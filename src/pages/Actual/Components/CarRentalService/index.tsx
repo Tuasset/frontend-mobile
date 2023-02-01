@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="CarRentalService">
-      <p>
+        <p className="title">
         Car Rental Service
       </p>
       <div className="detail">

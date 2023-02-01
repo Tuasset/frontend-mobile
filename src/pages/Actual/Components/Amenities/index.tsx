@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="Amenities">
-      <p>
+      <p className="title">
         Amenities
       </p>
       <div className="Amenities-contain">
