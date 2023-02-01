@@ -39,8 +39,10 @@
         justify-content: left;
         align-items: center;
 
-        svg{
+        img{
           margin-right: 0.1rem;
+          aspect-ratio: 1/1;
+          width: 24px;
         }
         span{
           font-family: 'Inter';
@@ -119,6 +121,8 @@
         color: #000000;
 
         strong{
+
+          font-weight: normal;
           opacity: 0.8;
         }
 
@@ -149,6 +153,7 @@
       .price-number{
         margin-bottom: 0.2rem;
         strong{
+
           font-family: 'Inter';
           font-style: normal;
           font-weight: 541;
