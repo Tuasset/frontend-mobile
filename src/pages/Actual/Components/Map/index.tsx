@@ -15,6 +15,9 @@ function App() {
 
     const googleMap = window.google && window.google.maps;
     useEffect(()=>{
+        if (typeof(googleMap) == "undefined"){
+            return;
+        }
         let myCenter = new googleMap.LatLng(mapData.lat, mapData.lng);
         let mapProp = {
             center:myCenter,
