@@ -27,8 +27,10 @@ const btnEle = (ref: any) => {
   );
 };
 
-function App() {
+const App: React.FC<{ list: any }> = ({ list }) => {
   const ref = useRef<DropdownRef>(null);
+  console.log("props", list);
+  // const list = useContext();
 
   return (
     <div className="listing">
@@ -133,9 +135,9 @@ function App() {
         Explore our collection of <br />
         available homes.
       </p> */}
-      <DetailCard />
+      <DetailCard list={list} />
     </div>
   );
-}
+};
 
 export default App;

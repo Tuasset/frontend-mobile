@@ -12,6 +12,7 @@
     "@types/react-dom": "^18.0.10",
     "antd-mobile": "^5.27.0",
     "antd-mobile-icons": "^0.3.0",
+    "csvtojson": "^2.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
