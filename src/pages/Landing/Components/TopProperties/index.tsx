@@ -95,10 +95,10 @@ function App() {
 
     const [firstHover, setFirstHover] = useState("MiamiButtonHover");
 
-    const likeChange = (likeOrdis:any,key:number)=>{
+    const likeChange = (ifLike:any,key:number)=>{
 
         const arrCopy = houseData.slice();
-        arrCopy[curHouse].houses[key].like = !likeOrdis
+        arrCopy[curHouse].houses[key].like = !ifLike
 
         setHouseData(arrCopy);
 

@@ -18,6 +18,11 @@ import Learn from "./pages/Learn";
 import Landing from "./pages/Landing";
 import Listing from "./pages/Listing";
 import Experience from "./pages/Experience";
+<<<<<<< HEAD
+=======
+import Actual from "./pages/Actual";
+
+>>>>>>> 8e4d26dfdf8a14318715ec80f776638fa9f98e46
 import "./App.css";
 
 const offerListUrl =
@@ -33,6 +38,7 @@ function App() {
       title: "Intro",
       icon: <ContentOutline />,
       badge: Badge.dot,
+<<<<<<< HEAD
     },
     // {
     //   key: "learn",
@@ -41,24 +47,39 @@ function App() {
     //   badge: "5",
     // },
     {
+=======
+    }, {
+      key: "learn",
+      title: "Learn",
+      icon: <UnorderedListOutline />,
+      badge: "5",
+    },{
+>>>>>>> 8e4d26dfdf8a14318715ec80f776638fa9f98e46
       key: "mobile\\landing",
       title: "Home",
       icon: <AppOutline />,
       badge: Badge.dot,
-    },
-    {
+    }, {
       key: "listing",
       title: "Listing",
       // icon: (active: boolean) =>
       //   active ? <MessageFill /> : <MessageOutline />,
       icon: <UnorderedListOutline />,
       badge: "99+",
+<<<<<<< HEAD
     },
     // {
     //   key: "experience",
     //   title: "Experience",
     //   icon: <UserOutline />,
     // },
+=======
+    }, {
+      key: "experience",
+      title: "Experience",
+      icon: <UserOutline />,
+    },
+>>>>>>> 8e4d26dfdf8a14318715ec80f776638fa9f98e46
   ];
 
   useEffect(() => {
@@ -110,7 +131,12 @@ function App() {
         <Route path="mobile" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
         <Route path="mobile/landing" element={<Landing />} />
+<<<<<<< HEAD
         <Route path="listing" element={<Listing list={offerList} />} />
+=======
+        <Route path="mobile/actual" element={<Actual />} />
+        <Route path="listing" element={<Listing />} />
+>>>>>>> 8e4d26dfdf8a14318715ec80f776638fa9f98e46
         <Route path="experience" element={<Experience />} />
       </Routes>
       <div className="height60"></div>

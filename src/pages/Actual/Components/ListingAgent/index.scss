@@ -1,0 +1,59 @@
+.ListingAgent {
+  display: flex;
+  justify-content: left;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  padding:0 0.25rem;
+
+  margin-top: 0.3rem;
+
+  .title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: rgba(0, 0, 0, 0.8);
+
+    margin-bottom: 0.15rem;
+  }
+
+  .ListingAgent-contain{
+    background: #F5F5F7;
+    border-radius: 8px;
+
+    padding: 0.15rem;
+
+    text-align: left;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+
+    color: #000000;
+
+    & > *{
+      margin: 0.1rem 0;
+
+      img{
+        margin-right: 0.2rem;
+      }
+    }
+
+    .agent-title{
+      p{
+        margin-top: 0.1rem;
+        font-size: 16px;
+      }
+    }
+
+
+  }
+}
