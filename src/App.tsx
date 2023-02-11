@@ -27,6 +27,7 @@ const offerListUrl =
 function App() {
   // const OfferListContext = createContext([]);
   const [offerList, setOfferList] = useState([]);
+  const [offerMap, setOfferMap] = useState(null);
 
   const tabs = [
     {
@@ -87,9 +88,12 @@ function App() {
         if (res.status === 200) {
           const csv = await res.text();
           const list: any = await csvToJson().fromString(csv);
-          // list.forEach((item: any, idx: number) => {
-          //   console.log(idx, item["Meta: _productid"]);
-          // });
+          const tempMap:any = {};
+          list.forEach((item: any, idx: number) => {
+            const { ID } = item;
+            tempMap[ID] = item;
+          });
+          setOfferMap(tempMap);
           setOfferList(list);
         } else {
           console.log(`Error code ${res.status}`);
@@ -122,11 +126,9 @@ function App() {
         <Route path="mobile" element={<Intro />} />
         <Route path="learn" element={<Learn />} />
         <Route path="mobile/landing" element={<Landing />} />
-
         <Route path="listing" element={<Listing list={offerList} />} />
-
-        <Route path="mobile/actual" element={<Actual />} />
-        <Route path="listing" element={<Listing list={offerList} />} />
+        <Route path="mobile/actual" element={<Actual offerMap={offerMap} />} />
+        {/* <Route path="listing" element={<Listing list={offerList} />} /> */}
         <Route path="experience" element={<Experience />} />
       </Routes>
       <div className="height60"></div>

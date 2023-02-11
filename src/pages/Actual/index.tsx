@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Bottom from "./Components/Bottom";
 import SwiperTop from "./Components/SwiperTop";
 import DetailBuy from "./Components/DetailBuy";
@@ -13,29 +13,33 @@ import AttractionsNearby from "./Components/AttractionsNearby";
 import ActivitiesNearby from "./Components/ActivitiesNearby";
 import ListingAgent from "./Components/ListingAgent";
 import Recommended from "./Components/Recommended";
+import { stat } from "fs";
 
-
-
-function App() {
+const App: React.FC<{ offerMap: any }> = ({ offerMap }) => {
   let navigate = useNavigate();
+  const location = useLocation();
+  const { state } = location;
+  const { ID = "" } = state;
+
+  console.log("current data",  offerMap[ID]);
 
   return (
     <div className="actual">
-        <SwiperTop/>
-        <DetailBuy/>
-        <About/>
-        <Amenities/>
-        <Map/>
-        <CarRentalService/>
-        <InvestmentValueInformation/>
-        <AttractionsNearby/>
-        <ActivitiesNearby/>
-        <ListingAgent/>
-        <Recommended/>
+      <SwiperTop />
+      <DetailBuy />
+      <About />
+      <Amenities />
+      <Map />
+      <CarRentalService />
+      <InvestmentValueInformation />
+      <AttractionsNearby />
+      <ActivitiesNearby />
+      <ListingAgent />
+      <Recommended />
 
-        <Bottom/>
+      <Bottom />
     </div>
   );
-}
+};
 
 export default App;

@@ -29,7 +29,6 @@ const btnEle = (ref: any) => {
 
 const App: React.FC<{ list: any }> = ({ list }) => {
   const ref = useRef<DropdownRef>(null);
-  console.log("props", list);
   // const list = useContext();
 
   return (
