@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./index.scss";
 
-function App() {
+
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
     const [activityInfo, setActivityInfo] = useState([{
         name:"Perfect for Skiing",
         description: "Perfect for Skiing.Brief Introduction of this place."

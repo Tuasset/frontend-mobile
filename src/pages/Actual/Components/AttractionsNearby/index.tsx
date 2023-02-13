@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./index.scss";
 
-function App() {
+
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
 
     const [attractions, setAttractions] = useState([{
         url:"https://tuassets.com/wp-content/reactpress/imgs/actual/attraction1.png?_t=1675244545",

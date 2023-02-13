@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./index.scss";
 
-function App() {
+
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
 
     const [carsInformation, setCarsInformation] = useState([{
         name:"Car A",

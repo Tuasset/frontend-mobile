@@ -75,6 +75,7 @@ function App() {
   ];
 
   useEffect(() => {
+    console.log("fetch");
     fetch(
       "https://tuassets.com/wp-content/reactpress/data/wc-product-export-data.csv",
       {
@@ -86,8 +87,11 @@ function App() {
     )
       .then(async (res) => {
         if (res.status === 200) {
+
           const csv = await res.text();
           const list: any = await csvToJson().fromString(csv);
+
+          console.log(list);
           const tempMap:any = {};
           list.forEach((item: any, idx: number) => {
             const { ID } = item;

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./index.scss";
 
-function App() {
+
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
 
   const [iconShow, setIconShow] = useState([true,true,true,true,true,true,true])
 
@@ -34,6 +35,11 @@ function App() {
     name:"Private hot tub",
     ifShow:iconShow[6]
   },]
+
+  useEffect(()=>{
+
+
+  },[]);
 
 
   return (

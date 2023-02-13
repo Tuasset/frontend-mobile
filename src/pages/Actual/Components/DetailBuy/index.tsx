@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Button } from 'antd-mobile'
 import "./index.scss";
 
-function App() {
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
 
   const [infomation, setInformation] = useState({
     address:"558 Fox Hill Rd, Chatham, MA 02633 USA",
@@ -22,6 +22,20 @@ function App() {
       ifLike:!infomation.ifLike
     })
   }
+
+  useEffect(()=>{
+    setInformation({
+      address:actualDetail.product_position.address,
+      houseType:actualDetail.product_type,
+      bathRoom:actualDetail.bathroom_numbers,
+      bedRoom:actualDetail.bedroom_numbers,
+      size:actualDetail.square_footage,
+      yearBuilt:actualDetail.built_year,
+      price:"15,000",
+      membershipFee:actualDetail.membership_fee,
+      ifLike:false
+    })
+  },[]);
 
 
   return (
