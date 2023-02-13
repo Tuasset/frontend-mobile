@@ -5,7 +5,8 @@ import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import housePrices from "./housePriceHistory.json"
 
-function App() {
+
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
     useLayoutEffect(() => {
         let root = am5.Root.new("chartdiv");
 

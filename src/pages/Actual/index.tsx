@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./index.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import Bottom from "./Components/Bottom";
@@ -14,6 +14,7 @@ import ActivitiesNearby from "./Components/ActivitiesNearby";
 import ListingAgent from "./Components/ListingAgent";
 import Recommended from "./Components/Recommended";
 import { stat } from "fs";
+import csvToJson from "csvtojson";
 
 const App: React.FC<{ offerMap: any }> = ({ offerMap }) => {
   let navigate = useNavigate();
@@ -21,20 +22,47 @@ const App: React.FC<{ offerMap: any }> = ({ offerMap }) => {
   const { state } = location;
   const { ID = "" } = state;
 
+
+  const [jsonInfo, setJsonInfo] = useState();
+
   console.log("current data",  offerMap[ID]);
+
+    useEffect(() => {
+        console.log("current data");
+        fetch(
+            "https://tuassets.com/wp-json/wp/v2/Product/"+ID,
+            {
+                method: "get",
+                headers: {
+                    "content-type": "text/csv;charset=UTF-8",
+                },
+            }
+        )
+            .then(async (res) => {
+                if (res.status === 200) {
+                    const json = await res.json();
+                    setJsonInfo(json.acf);
+                } else {
+                    console.log(`Error code ${res.status}`);
+                }
+            })
+            .catch((e) => {
+                console.error(e);
+            });
+    }, [ID]);
 
   return (
     <div className="actual">
       <SwiperTop />
-      <DetailBuy />
+      <DetailBuy actualDetail={jsonInfo}/>
       <About />
-      <Amenities />
-      <Map />
-      <CarRentalService />
-      <InvestmentValueInformation />
-      <AttractionsNearby />
-      <ActivitiesNearby />
-      <ListingAgent />
+      <Amenities actualDetail={jsonInfo}/>
+      <Map actualDetail={jsonInfo}/>
+      <CarRentalService actualDetail={jsonInfo}/>
+      <InvestmentValueInformation actualDetail={jsonInfo}/>
+      <AttractionsNearby actualDetail={jsonInfo}/>
+      <ActivitiesNearby actualDetail={jsonInfo}/>
+      <ListingAgent actualDetail={jsonInfo}/>
       <Recommended />
 
       <Bottom />

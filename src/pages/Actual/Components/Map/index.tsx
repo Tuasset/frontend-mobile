@@ -4,7 +4,8 @@ import GoogleMapReact from 'google-map-react';
 
 
 
-function App() {
+
+const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
 
     const [mapData, setMapData] = useState({
         lat:42.361145,
@@ -18,6 +19,14 @@ function App() {
         if (typeof(googleMap) == "undefined"){
             return;
         }
+
+        setMapData({
+            ...actualDetail,
+            lat: actualDetail.product_position.lat,
+            lng: actualDetail.product_position.lng,
+            zoom: actualDetail.product_position.zoom
+        })
+
         let myCenter = new googleMap.LatLng(mapData.lat, mapData.lng);
         let mapProp = {
             center:myCenter,
