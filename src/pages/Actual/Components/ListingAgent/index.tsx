@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./index.scss";
 
 
@@ -11,6 +11,20 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
         email:"IveyH@gmail.com",
         contact:"558 Fox Hill Rd, Chatham, MA 02633"
     })
+
+    useEffect(()=>{
+        if (actualDetail.agent_name_1!=undefined){
+
+            setAgentInfo({
+                name:actualDetail.agent_name_1,
+                title:actualDetail.agent_describe_1,
+                phone:actualDetail.agent_phone_1,
+                email:actualDetail.agent_email_1,
+                contact: actualDetail.agent_address_1 ? actualDetail.agent_address_1.address : "unknown"
+            })
+        }
+
+    },[actualDetail]);
 
   return (
     <div className="ListingAgent">

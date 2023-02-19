@@ -6,6 +6,8 @@ import GoogleMapReact from 'google-map-react';
 
 
 const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
+    // console.log("map actualDetail");
+    // console.log(actualDetail);
 
     const [mapData, setMapData] = useState({
         lat:42.361145,
@@ -20,12 +22,16 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
             return;
         }
 
-        setMapData({
-            ...actualDetail,
-            lat: actualDetail.product_position.lat,
-            lng: actualDetail.product_position.lng,
-            zoom: actualDetail.product_position.zoom
-        })
+        if (actualDetail.product_position!=undefined){
+
+            setMapData({
+                ...actualDetail,
+                lat: actualDetail.product_position.lat,
+                lng: actualDetail.product_position.lng,
+                zoom: actualDetail.product_position.zoom
+            })
+        }
+
 
         let myCenter = new googleMap.LatLng(mapData.lat, mapData.lng);
         let mapProp = {
@@ -46,7 +52,7 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
         googleMap.event.addListener(marker, 'click', function() {
             infoWindow.open(map, marker);
         });
-    });
+    },[]);
 
   return (
     <div className="Map">

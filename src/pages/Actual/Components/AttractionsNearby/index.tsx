@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./index.scss";
 
 
@@ -11,9 +11,26 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
         url:"https://tuassets.com/wp-content/reactpress/imgs/actual/attraction2.png?_t=1675244545",
         alt:""
     },{
-        url:"https://tuassets.com/wp-content/reactpress/imgs/actual/attraction3.png?_t=1675244545",
+        url:"https://tuassets.com/wp-content/reactpress/imgs/actual/attraction2.png?_t=1675244545",
         alt:""
     }])
+
+    useEffect(()=>{
+        if (actualDetail.attraction_img_1!=undefined){
+
+            setAttractions([{
+                url:actualDetail.attraction_img_1.url,
+                alt:""
+            },{
+                url:actualDetail.attraction_img_2.url,
+                alt:""
+            },{
+                url:actualDetail.attraction_img_3.url,
+                alt:""
+            }])
+        }
+
+    },[actualDetail]);
 
   return (
     <div className="AttractionsNearby">

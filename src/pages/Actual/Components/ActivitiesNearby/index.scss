@@ -20,6 +20,7 @@
   }
 
   .activites{
+    display: flex;
     white-space: nowrap;
     overflow-x: scroll;
 
@@ -29,7 +30,8 @@
       width: 180px;
 
       white-space: nowrap;
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
 
       padding: 0.25rem;
       margin-right: 0.2rem;
@@ -58,19 +60,24 @@
 
         color: #000000;
       }
+      .activity-description-outer{
+        display: flex;
+        .activity-description{
+          padding-right: 0.4rem;
 
-      .activity-description{
-        padding-right: 0.4rem;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
+          //margin-bottom: 0.8rem;
 
-
-        margin-bottom: 0.8rem;
+          display: flex;
+          flex-grow: 1;
+        }
       }
+
     }
 
 

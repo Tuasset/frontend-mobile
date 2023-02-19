@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./index.scss";
 
 
@@ -10,6 +10,20 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
         name:"Perfect for Skiing",
         description: "Perfect for Skiing.Brief Introduction of this place."
     }])
+
+    useEffect(()=>{
+        if (actualDetail.activity_title_1!=undefined){
+
+            setActivityInfo([{
+                name:actualDetail.activity_title_1,
+                description: actualDetail.activity_content_1
+            },{
+                name:actualDetail.activity_title_1,
+                description: actualDetail.activity_content_2
+            }])
+        }
+
+    },[actualDetail]);
 
   return (
     <div className="ActivitiesNearby">
@@ -23,9 +37,12 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
                         <p className="activity-name">
                             {item.name}
                         </p>
-                        <p className="activity-description">
-                            {item.description}
-                        </p>
+                        <div className="activity-description-outer">
+                            <p className="activity-description">
+                                {item.description}
+                            </p>
+                        </div>
+
 
                     </div>
                 )
