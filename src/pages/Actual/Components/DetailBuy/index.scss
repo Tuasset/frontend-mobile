@@ -133,6 +133,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      margin-bottom: 0.2rem;
+
       .tag{
         display: flex;
         align-items: center;
@@ -151,7 +154,6 @@
       }
 
       .price-number{
-        margin-bottom: 0.2rem;
         strong{
 
           font-family: 'Inter';

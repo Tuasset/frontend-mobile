@@ -2,7 +2,9 @@ import React, {useEffect, useState} from "react";
 import { Button } from 'antd-mobile'
 import "./index.scss";
 
-const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
+const App: React.FC<{ actualDetail: any, houseDetail:any }> = ({ actualDetail, houseDetail }) => {
+  // console.log("DetailBuy actualDetail begin");
+  // console.log(actualDetail);
 
   const [infomation, setInformation] = useState({
     address:"558 Fox Hill Rd, Chatham, MA 02633 USA",
@@ -23,19 +25,34 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
     })
   }
 
+  function insertStr (str: string) {
+    const ary = str.split("");
+    for (var i = str.length - 3; i > 0 ; i-=3){
+      ary.splice(i, 0, ",");    // Inserts at index
+    }
+    return ary.join("");
+  }
+
   useEffect(()=>{
-    setInformation({
-      address:actualDetail.product_position.address,
-      houseType:actualDetail.product_type,
-      bathRoom:actualDetail.bathroom_numbers,
-      bedRoom:actualDetail.bedroom_numbers,
-      size:actualDetail.square_footage,
-      yearBuilt:actualDetail.built_year,
-      price:"15,000",
-      membershipFee:actualDetail.membership_fee,
-      ifLike:false
-    })
-  },[]);
+    // console.log("DetailBuy actualDetail:");
+    // console.log(actualDetail);
+    // console.log(houseDetail.price);
+    if (actualDetail.product_position!=undefined && houseDetail.price!=undefined){
+
+      setInformation({
+        address:actualDetail.product_position.address,
+        houseType:actualDetail.product_type,
+        bathRoom:actualDetail.bathroom_numbers,
+        bedRoom:actualDetail.bedroom_numbers,
+        size:actualDetail.square_footage,
+        yearBuilt:actualDetail.built_year,
+        price:insertStr(houseDetail.price),
+        membershipFee:actualDetail.membership_fee,
+        ifLike:false
+      })
+    }
+
+  },[actualDetail, houseDetail]);
 
 
   return (

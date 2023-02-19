@@ -22,11 +22,15 @@
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
+    align-content: flex-start;
 
     padding: 0.2rem 0.2rem 0 0.2rem;
 
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
+    width: 100%;
+    aspect-ratio: 5/4;
 
     .amenity{
       display: flex;

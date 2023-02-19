@@ -86,6 +86,8 @@ function App() {
       }
     )
       .then(async (res) => {
+
+        console.log("then");
         if (res.status === 200) {
 
           const csv = await res.text();

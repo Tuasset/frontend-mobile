@@ -1,16 +1,42 @@
-import React, {useLayoutEffect, useState} from "react";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 import "./index.scss";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-import housePrices from "./housePriceHistory.json"
+// import housePrices from "./housePriceHistory.json"
 
 
 const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
+
+    const [priceHistoryArray, setPriceHistoryArray] = useState([]);
+
+    useEffect(()=>{
+        if (actualDetail.price_history!=undefined){
+
+            console.log("!!!!!!!!!!!!!!!!!price History url");
+            console.log(actualDetail.price_history.url);
+            fetch(
+                actualDetail.price_history.url
+            )
+                .then(async (res) => {
+                    if (res.status === 200) {
+                        const json = await res.json();
+
+                        setPriceHistoryArray(json);
+                    } else {
+                        console.log(`Error code ${res.status}`);
+                    }
+                })
+                .catch((e) => {
+                    console.error(e);
+                });
+        }
+
+    },[actualDetail]);
+
     useLayoutEffect(() => {
         let root = am5.Root.new("chartdiv");
-
-
+        console.log("-----------------------chartdiv-------------------------");
 // Set themes
 // https://www.amcharts.com/docs/v5/concepts/themes/
         root.setThemes([
@@ -21,8 +47,6 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
             dateFormat: "yyyy",
             dateFields: ["valueX"]
         });
-
-        let data = housePrices;
 
 
 // Create chart
@@ -108,7 +132,7 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
             dateFields: ["date"]
         });
 
-        series.data.setAll(data);
+        series.data.setAll(priceHistoryArray);
 
 // Add cursor
 // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
@@ -131,7 +155,7 @@ const App: React.FC<{ actualDetail: any }> = ({ actualDetail }) => {
         return () => {
             root.dispose();
         };
-    }, []);
+    }, [priceHistoryArray]);
 
     const [tableList,setTableList] = useState([{
         name:"Airbnb",
