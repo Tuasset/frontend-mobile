@@ -19,7 +19,7 @@ function App() {
     <div className="landing-CreateAccount">
         <p className="landing-CreateAccount-title">Start Your Real Estate Investment Journey Today</p>
         <div className="landing-CreateAccount-Main">
-            <button onClick={toExperience}>
+            <button onClick={toIntro}>
                 Create an account now
             </button>
             <p onClick={toIntro}>

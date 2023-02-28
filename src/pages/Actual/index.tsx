@@ -16,7 +16,7 @@ import Recommended from "./Components/Recommended";
 import { stat } from "fs";
 import csvToJson from "csvtojson";
 
-const App: React.FC<{ offerMap: any }> = ({ offerMap }) => {
+const App: React.FC<{}> = ({ }) => {
   let navigate = useNavigate();
   const location = useLocation();
   const { state } = location;

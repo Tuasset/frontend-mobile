@@ -13,10 +13,6 @@ function App() {
         navigate(path);
     }
 
-    const toActual = () =>{
-        let path = `/mobile/actual`;
-        navigate(path);
-    }
   return (
     <div className="landing-started">
         <div className="started-describe">
@@ -24,7 +20,7 @@ function App() {
             <p>Invest with a home</p>
             <p>Retire with homes</p>
         </div>
-        <button onClick={toActual} className="started-button">
+        <button onClick={toList} className="started-button">
             <p>Get started</p>
         </button>
         <div>
