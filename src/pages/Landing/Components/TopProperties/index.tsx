@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 
 import "./index.scss";
+import {useNavigate} from "react-router-dom";
 
 function App() {
 
@@ -104,6 +105,10 @@ function App() {
 
     }
 
+
+    let navigate = useNavigate();
+    const ID = 33;
+
   return (
     <div className="landing-TopProperties">
         <div className="landing-TopProperties-title">
@@ -131,7 +136,10 @@ function App() {
             {
                 houseData[curHouse].houses.map((item, key)=>{
                     return (
-                        <div className="landing-TopProperties-Houses-house">
+                        <div className="landing-TopProperties-Houses-house"
+                             onClick={() => {
+                                 navigate("/mobile/actual", { state: { ID } });
+                             }}>
                             <img src={item.image}/>
                             <div className="houseInfoRow1">
                                 <div>

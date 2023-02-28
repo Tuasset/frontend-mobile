@@ -133,7 +133,7 @@ function App() {
         <Route path="learn" element={<Learn />} />
         <Route path="mobile/landing" element={<Landing />} />
         <Route path="listing" element={<Listing list={offerList} />} />
-        <Route path="mobile/actual" element={<Actual offerMap={offerMap} />} />
+        <Route path="mobile/actual" element={<Actual />} />
         {/* <Route path="listing" element={<Listing list={offerList} />} /> */}
         <Route path="experience" element={<Experience />} />
       </Routes>

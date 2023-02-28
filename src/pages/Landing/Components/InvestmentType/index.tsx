@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./index.scss";
+import {useNavigate} from "react-router-dom";
 
 
 
@@ -35,6 +36,7 @@ function App() {
 
     const [buyButtonHover, setBuyButtonHover]= useState("buyButtonHover");
 
+    let navigate = useNavigate();
 
   return (
     <div className="landing-InvestmentType">
@@ -43,7 +45,9 @@ function App() {
             <p>your vacations </p>
             <p>into investments</p>
         </div>
-        <div className="landing-JourneyStart">
+        <div className="landing-JourneyStart" onClick={() => {
+            navigate("/listing");
+        }}>
             <div className="landing-JourneyStart-left">
                 <p>
                     Start your journey today
